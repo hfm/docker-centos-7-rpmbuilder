@@ -10,3 +10,4 @@ WORKDIR /home/builder
 RUN rpmdev-setuptree
 
 ONBUILD ADD ./rpmbuild/ /home/builder/rpmbuild/
+ONBUILD RUN sudo chown -R builder:builder ./rpmbuild/
